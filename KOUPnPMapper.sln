@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KOUPnPMapperService", "src/KOUPnPMapperService.csproj", "{9A702345-7B89-4A7E-B4D9-2E4F416694B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KOUPnPMapperApp", "src/KOUPnPMapperApp.csproj", "{5B464E33-9303-466D-94E3-EAB99C53F0A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A702345-7B89-4A7E-B4D9-2E4F416694B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A702345-7B89-4A7E-B4D9-2E4F416694B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A702345-7B89-4A7E-B4D9-2E4F416694B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A702345-7B89-4A7E-B4D9-2E4F416694B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B464E33-9303-466D-94E3-EAB99C53F0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B464E33-9303-466D-94E3-EAB99C53F0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B464E33-9303-466D-94E3-EAB99C53F0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B464E33-9303-466D-94E3-EAB99C53F0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
