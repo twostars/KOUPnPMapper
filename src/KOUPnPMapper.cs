@@ -4,7 +4,14 @@ namespace KOUPnPMapper
 {
     public static class KOUPnPMapper
     {
-        public static readonly int[] DefaultPorts = { 15100, 15001 };
+        public static readonly int[] DefaultPorts =
+        {
+            // Login ports
+            15100, 15101, 15102, 15103, 15104, 15105, 15106, 15107, 15108, 15109, 15110, 15111, 15112, 15113, 15114,
+
+            // Game port
+            15001
+        };
         public static int[] Ports;
         public static readonly string Protocol = "TCP";
 
