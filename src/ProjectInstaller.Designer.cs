@@ -43,6 +43,8 @@
     "IPv4 address that is found on the system.";
             this.KOUPnPMapperServiceInstaller.DisplayName = "Knight Online UPnP port mapper (forwarder)";
             this.KOUPnPMapperServiceInstaller.ServiceName = "KOUPnPMapperService";
+            this.KOUPnPMapperServiceInstaller.ServicesDependedOn = new string[] {
+        "Netman"};
             this.KOUPnPMapperServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
