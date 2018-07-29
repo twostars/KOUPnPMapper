@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.NetworkInformation;
+using System.Collections.Generic;
 
 namespace KOUPnPMapper
 {
@@ -28,6 +29,8 @@ namespace KOUPnPMapper
         public static IPAddress GetDefaultLocalIP()
         {
             var cards = NetworkInterface.GetAllNetworkInterfaces();
+
+            var addressesByIndex = new SortedList<int, IPAddress>();
             foreach (var card in cards)
             {
                 if (card.OperationalStatus != OperationalStatus.Up)
@@ -37,12 +40,21 @@ namespace KOUPnPMapper
                 if (props == null)
                     continue;
 
+                var ipv4Props = props.GetIPv4Properties();
+                if (ipv4Props == null)
+                    continue;
+
+                var index = ipv4Props.Index;
                 foreach (var ip in props.UnicastAddresses)
                 {
                     if (ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                        return ip.Address;
+                        addressesByIndex.Add(index, ip.Address);
                 }
             }
+
+            // Return the first. This is sorted by index.
+            foreach (var kvp in addressesByIndex)
+                return kvp.Value;
 
             return null;
         }
